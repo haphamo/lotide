@@ -12,15 +12,13 @@ const assertEqual = function(actual, expected) {
     console.log(`${failSticker} ${failed}` + actual + `${dne}` + expected);
   }
 };
-
-
 //Create a function head which returns the first item in the array.
 
-let head = function (data){
-  for(i = 0; i < data.length; i ++){
+let head = function(data) {
+  for (let i = 0; i < data.length; i ++) {
     return data[i];
-  } 
-}
+  }
+};
 
 // TEST CODE
 assertEqual(head([5,4,7]), 5);
