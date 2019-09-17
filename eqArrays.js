@@ -25,7 +25,6 @@ let eqArrays = function(x, y) {
     return true;
   } else if (final === "F"){
     return false;
-  
   }
 };
 // You have to assign true and false to a variable because it will stop the loop if its returned nested inside
