@@ -17,14 +17,14 @@ let eqArrays = function(x, y) {
   let final = "";
   for (let i = 0; i < x.length; i++) {
     if (x[i] === y[i]) {
-      final = "T";
+      
     } else {
       final = "F";
     }
-  } if (final === "T") {
-    return true;
-  } else if (final === "F"){
+  } if (final === "F") {
     return false;
+  } else if (final === ""){
+    return true;
   }
 };
 // You have to assign true and false to a variable because it will stop the loop if its returned nested inside
@@ -32,6 +32,6 @@ console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
 console.log(eqArrays([1, 2, 3], [3, 2, 1]));// => false
 
 console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+console.log(eqArrays([1, "2", "3"], ["1", "2", 3])); // => false
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
