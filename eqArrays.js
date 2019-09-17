@@ -23,15 +23,16 @@ let eqArrays = function(x, y) {
     }
   } if (final === "T") {
     return true;
-  } else {
+  } else if (final === "F"){
     return false;
+  
   }
 };
-// You have to assign true and false to a variable because it will stop the loop if its returned nested inside.
+// You have to assign true and false to a variable because it will stop the loop if its returned nested inside
 console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
 console.log(eqArrays([1, 2, 3], [3, 2, 1]));// => false
 
 console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
