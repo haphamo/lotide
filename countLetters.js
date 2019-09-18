@@ -14,7 +14,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(str) {
-  let results = {};
+  let results = {}; 
   for (let letter of str) {
     
     if (letter !== ' ') {
