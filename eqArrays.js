@@ -17,13 +17,12 @@ let eqArrays = function(x, y) {
   let final = "";
   for (let i = 0; i < x.length; i++) {
     if (x[i] === y[i]) {
-      
     } else {
       final = "F";
     }
   } if (final === "F") {
     return false;
-  } else if (final === ""){
+  } else if (final === "") {
     return true;
   }
 };
