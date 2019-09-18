@@ -43,11 +43,9 @@ const middle = function(array) {
     return result;
   } else if (array.length % 2 === 0) {
     //case 3 : For arrays with an even number of elements, an array containing the two elements in the middle should be returned
-    //at this index (math.floor(array.length/2)
-    // store slice var
+    //store an upper and lower index and push into result
     let upperIndex = array.length / 2;
     let lowerIndex = array.length / 2 - 1;
-    
     result.push(array[lowerIndex],array[upperIndex]);
   } else if (array.length % 2 === 1) {
     //case 2: For arrays with odd number of elements
@@ -56,7 +54,6 @@ const middle = function(array) {
     //return array [middle index]
     
     const indexHalf = Math.floor(array.length / 2);
-    
     result.push(array[indexHalf]);
   }
   return result;
