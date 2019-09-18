@@ -1,4 +1,5 @@
 // FUNCTION IMPLEMENTATION
+// can really only be used for checking primitive return types
 const assertEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";
   const passSticker = "✅ ";
