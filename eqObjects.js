@@ -16,13 +16,19 @@ const assertEqual = function(actual, expected) {
 
 let eqArrays = function(arr1, arr2) {
   let result = "";
-  for (let i = 0; i < arr2.length; i++) {
+  if(arr1.length !== arr2.length){
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] === arr2[i]) {
-      result = true;
     } else {
       result = false;
     }
-  } return result;
+  } if (result === false) {
+    return false;
+  } else if (result === "") {
+    return true;
+  }
 };
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!

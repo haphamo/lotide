@@ -15,13 +15,19 @@ const assertEqual = function(actual, expected) {
 
 let eqArrays = function(arr1, arr2) {
   let result = "";
-  for (let i = 0; i < arr2.length; i++) {
+  if(arr1.length !== arr2.length){
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] === arr2[i]) {
-      result = true;
     } else {
       result = false;
     }
-  } return result;
+  } if (result === false) {
+    return false;
+  } else if (result === "") {
+    return true;
+  }
 };
 // You have to assign true and false to a variable because it will stop the loop if its returned nested inside
 console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
