@@ -1,17 +1,17 @@
 // FUNCTION IMPLEMENTATION
-let eqArrays = function(x, y) {
-  let final = "";
-  if(x.length !== y.length){
+let eqArrays = function(arr1, arr2) {
+  let result = "";
+  if(arr1.length !== arr2.length){
     return false;
   }
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] === y[i]) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[i]) {
     } else {
-      final = "F";
+      result = false;
     }
-  } if (final === "F") {
+  } if (result === false) {
     return false;
-  } else if (final === "") {
+  } else if (result === "") {
     return true;
   }
 };
