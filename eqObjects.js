@@ -1,5 +1,6 @@
 // FUNCTION IMPLEMENTATION
 // can really only be used for checking primitive return types
+// Question: I can't get rid of my console.log to return my results l: 53/54
 const assertEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";
   const passSticker = "✅ ";
@@ -45,9 +46,8 @@ const eqObjects = function(object1, object2) {
       //compare keys of object 1 to keys of object 2
       else if (object1[key] === object2[key]) {
         result = true;
-      }  
-    }  
-
+      }
+    }
   } else {
       result = false;
   } console.log(result);

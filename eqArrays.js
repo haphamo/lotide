@@ -1,4 +1,5 @@
 // FUNCTION IMPLEMENTATION
+
 const assertEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";
   const passSticker = "✅ ";
