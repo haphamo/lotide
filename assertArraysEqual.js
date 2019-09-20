@@ -1,22 +1,17 @@
 // FUNCTION IMPLEMENTATION
 let eqArrays = function(arr1, arr2) {
   let result = "";
-  if(arr1.length !== arr2.length){
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-    } else {
-      result = false;
-    }
-  } if (result === false) {
-    return false;
-  } else if (result === "") {
-    return true;
-  }
-};
-//console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
-
+  if (arr1.length === arr2.length) {
+    for (let i = 0; i < arr1.length; i ++) {
+      if (typeof arr1[i] !== typeof arr2[i]) {
+        result = false;
+        return result;
+      } else {
+        result = true;
+      } 
+    } 
+  } return result;
+}
 
 const assertArraysEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";

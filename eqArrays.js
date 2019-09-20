@@ -16,25 +16,23 @@ const assertEqual = function(actual, expected) {
 
 let eqArrays = function(arr1, arr2) {
   let result = "";
-  if(arr1.length !== arr2.length){
+  if (arr1.length !== arr2.length) {
     return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-    } else {
-      result = false;
-    }
-  } if (result === false) {
-    return false;
-  } else if (result === "") {
-    return true;
+  } else {
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] === arr2[i] && (typeof arr1[i] === typeof arr2[i])) {
+        result = true;
+      } else {
+        result = false;
+      }
+    } return result;
   }
 };
 // You have to assign true and false to a variable because it will stop the loop if its returned nested inside
 console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1]));// => false
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);// => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays([1, "2", "3"], ["1", "2", 3])); // => false
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
+assertEqual(eqArrays([1, "2", "3"], ["1", "2", 3]), false); // => false
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
