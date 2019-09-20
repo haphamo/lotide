@@ -14,7 +14,7 @@ const map = function(array, callback) {
 };
 
 const results1 = map(words, word => word[0]); //function is word => word[0]
-console.log(results1);
+//console.log(results1);
 
 // FUNCTION IMPLEMENTATION
 let eqArrays = function(arr1, arr2) {
@@ -24,7 +24,6 @@ let eqArrays = function(arr1, arr2) {
   }
   for(let i = 0; i < arr1.length; i++) {
     if (arr1[i] === arr2[i]) {
-    
     } else {
       result = false;
     }
@@ -51,3 +50,4 @@ const assertArraysEqual = function(actual, expected) {
 
 //test code
 assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
+console.log("------")

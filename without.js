@@ -12,7 +12,6 @@ let eqArrays = function(arr1, arr2) {
   } return result;
 }
 
-
 const assertArraysEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";
   const passSticker = "✅ ";
@@ -53,4 +52,7 @@ without(["hello", "world", "lighthouse"], ["lighthouse"]); // no need to capture
 //Test code
 console.log(without([1, 2, 3], [1])) // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log("-------")
 assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ['hello', 'world']);
+console.log("-------")
+assertArraysEqual(without(["Tina", "David", "Anthony"], ["Anthony"]), ['Tina', 'David']);
