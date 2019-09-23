@@ -1,18 +1,3 @@
-// FUNCTION IMPLEMENTATION
-let eqArrays = function(arr1, arr2) {
-  let result = "";
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      } 
-      
-    } return true;
-  }
-};
-
 //Challenge:
 //Implement middle which will take in an array and return the middle-most element(s) of the given array.
 //The middle function should return an array with only the middle element(s) of the provided array. This means that the length of the returned elements could vary.
@@ -21,8 +6,6 @@ const middle = function(array) {
   let result = [];
   //case 1; If array has 1 or 2 elements, return empty array
   if (array.length === 1 || array.length === 2) {
-    //return empty arry
-    
     return result;
 
   } else if (array.length % 2 === 0) {
