@@ -13,6 +13,6 @@ const assertEqual = function(actual, expected) {
     console.log(`${failSticker} ${failed}` + actual + `${dne}` + expected);
   }
 };
-// TEST CODE
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 4);
+
+
+module.exports = assertEqual;
