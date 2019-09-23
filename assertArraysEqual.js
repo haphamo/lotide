@@ -1,17 +1,4 @@
-// FUNCTION IMPLEMENTATION
-let eqArrays = function(arr1, arr2) {
-  let result = "";
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i ++) {
-      if (typeof arr1[i] !== typeof arr2[i]) {
-        result = false;
-        return result;
-      } else {
-        result = true;
-      } 
-    } 
-  } return result;
-}
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   const passed = "Assertion Passed: ";
@@ -27,8 +14,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-//Test Cases
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => should PASS
-assertArraysEqual(["1", 2, "3"], ["1", "2", "3"]); // => should FAIL
-assertArraysEqual([1, "2", "3"], ["1", "2", "3"]); // => should FAIL
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => should FAIL
+module.exports = assertArraysEqual;
