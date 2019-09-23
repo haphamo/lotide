@@ -1,19 +1,3 @@
-// FUNCTION IMPLEMENTATION
-
-const assertEqual = function(actual, expected) {
-  const passed = "Assertion Passed: ";
-  const passSticker = "✅ ";
-  const failed = "Assertion Failed: ";
-  const failSticker = "❗️ ";
-  const equal = " === ";
-  const dne = " !== ";
-  if (actual === expected) {
-    console.log(`${passSticker} ${passed}` + actual + `${equal}` +  expected);
-  } else {
-    console.log(`${failSticker} ${failed}` + actual + `${dne}` + expected);
-  }
-};
-
 let eqArrays = function(arr1, arr2) {
   let result = "";
   if (arr1.length !== arr2.length) {
@@ -28,11 +12,5 @@ let eqArrays = function(arr1, arr2) {
     } return result;
   }
 };
-// You have to assign true and false to a variable because it will stop the loop if its returned nested inside
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);// => false
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays([1, "2", "3"], ["1", "2", 3]), false); // => false
-
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+module.exports = eqArrays;
