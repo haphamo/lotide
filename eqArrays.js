@@ -4,12 +4,10 @@ let eqArrays = function(arr1, arr2) {
     return false;
   } else {
     for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] === arr2[i] && (typeof arr1[i] === typeof arr2[i])) {
-        result = true;
-      } else {
-        result = false;
+      if (arr1[i] !== arr2[i] && (typeof arr1[i] !== typeof arr2[i])) {
+        return false;
       }
-    } return result;
+    } return true;
   }
 };
 

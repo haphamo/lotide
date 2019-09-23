@@ -7,6 +7,7 @@ const assertArraysEqual = function(actual, expected) {
   const failSticker = "❗️ ";
   const equal = " === ";
   const dne = " !== ";
+  console.log(eqArrays(actual, expected));
   if (eqArrays(actual, expected)) {
     console.log(`${passSticker} ${passed}` + actual + `${equal}` +  expected);
   } else {
