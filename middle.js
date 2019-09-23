@@ -37,10 +37,11 @@ const assertArraysEqual = function(actual, expected) {
 const middle = function(array) {
   let result = [];
   //case 1; If array has 1 or 2 elements, return empty array
-  if (array.length <= 2) {
+  if (array.length === 1 || array.length === 2) {
     //return empty arry
     
     return result;
+
   } else if (array.length % 2 === 0) {
     //case 3 : For arrays with an even number of elements, an array containing the two elements in the middle should be returned
     //store an upper and lower index and push into result
@@ -64,10 +65,5 @@ const middle = function(array) {
 //console.log(middle([1,2,3,4,5,6]));
 //console.log(middle([1,2,3,4,5]));
 
-// TEST CODE
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]),[]); // => []
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3, 4]); // => [3, 4]
+
+module.exports = middle;
