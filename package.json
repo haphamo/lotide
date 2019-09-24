@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@haphamo/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A library of functions",
+  "main": "README.md.js",
   "directories": {
     "test": "test"
   },
@@ -19,7 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/haphamo/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name" : "Ha Pham",
+    "email" : "hapham0392@gmail.com"
+  },
+
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/haphamo/lotide/issues"
